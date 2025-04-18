@@ -28,7 +28,7 @@ public class AuthenticationController {
     }
 
     @GetMapping("/register")
-    public String register(Model model) {
+    public String register(Model model) {       //Model works like a shopping cart that fills its cart and take it to the template(ie HTML)
         UserDto userDto = new UserDto();
         model.addAttribute("user", userDto);
         return "register";
