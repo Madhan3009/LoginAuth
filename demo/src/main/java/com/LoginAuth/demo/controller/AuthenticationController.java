@@ -59,3 +59,11 @@ public class AuthenticationController {
         return "login";
     }
 }
+
+
+
+Browser->>Controller: GET /register
+Controller->>Browser: register.html + empty UserDto
+Browser->>Controller: POST /register/save (filled UserDto)
+Controller->>Service: saveUser(userDto)
+Service->>Database: Save validated user
